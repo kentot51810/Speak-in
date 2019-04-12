@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:background="@color/bottom_area_background"
+    tools:context=".BottomResultFragment"
+    android:id="@+id/fragment_container_result">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/word_definition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#f7f7f7"
+        android:textSize="28sp"
+        tools:text="Sample Text" />
+
+</FrameLayout>

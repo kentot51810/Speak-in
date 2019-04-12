@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:elevation="0dp"
+        android:gravity="center"
+        app:elevation="0dp">
+
+        <ImageButton
+            android:id="@+id/mic_button"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cute_mic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finding a word?"
+            android:textSize="18sp" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/tab_indicator_color"
+        app:tabMode="scrollable"
+        app:tabTextColor="@color/tab_text_color">
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bottom_area_background">
+        <!--Initial state fragment-->
+        <FrameLayout
+            android:id="@+id/initial_state_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            tools:visibility="gone">
+
+            <fragment
+                android:id="@+id/initial_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.kennedy.hiatus.speak_indictionary.InitialStateFragment"/>
+        </FrameLayout>
+
+        <!--No Internet Fragment-->
+        <FrameLayout
+            android:id="@+id/no_internet_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/no_internet_fragent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.kennedy.hiatus.speak_indictionary.NoInternetFragment"/>
+        </FrameLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/bottom_horizontal_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bottom_area_background"
+            android:visibility="gone"/>
+
+        <!--A loading screen so users know that it is happening-->
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/tab_indicator_color" />
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+    <color name="colorPrimary">#012643</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="bottom_area_background">#081A25</color>
+    <color name="tab_text_color">#FFFFFF</color>
+    <color name="tab_indicator_color">#F6AE00</color>
+
+
+
+    <!--color pallete from material.io-->
+    <color name="primaryColor">#fce4ec</color>
+    <color name="primaryLightColor">#ffffff</color>
+    <color name="primaryDarkColor">#c9b2ba</color>
+    <color name="secondaryColor">#f8bbd0</color>
+    <color name="secondaryLightColor">#ffeeff</color>
+    <color name="secondaryDarkColor">#c48b9f</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+</resources>
